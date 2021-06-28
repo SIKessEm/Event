@@ -1,4 +1,4 @@
-<?php namespace SIKessEm\Event;
+<?php namespace SIKessEm\Events;
 /**
  * Events emitter trait
  *
