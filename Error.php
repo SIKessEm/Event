@@ -13,7 +13,7 @@ class Error extends \Error {
   public const LISTENING = 0x01;
 
   /**
-   * Event emission error code
+   * Event emitting error code
    */
-  public const EMISSION = 0x02;
+  public const EMITTING = 0x02;
 }

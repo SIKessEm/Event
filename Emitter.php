@@ -16,6 +16,6 @@ trait Emitter {
    public function emit(string $name, ...$args) {
      if(method_exists($this, $emit = 'emit' . ucFirst($name)))
        return $this->$emit(...$args);
-     throw new Error('Cannot emit event ' . $this::class . "::$name", Error::EMISSION);
+     throw new Error('Cannot emit event ' . $this::class . "::$name", Error::EMITTING);
    }
 }
