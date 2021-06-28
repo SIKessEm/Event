@@ -14,8 +14,8 @@ trait Listener {
    * @param callable $action The event name
    */
   public function on(string $event, callable $action) {
-    if(method_exists($this, $listen = 'on' . ucFirst($event)))
-      return $this->$listen(...$args);
-    throw new Error("Cannot listen $event on " . $this::class, Error::LISTENING);
+    if(method_exists($this, $on = 'on' . ucFirst($event)))
+      return $this->$on($action);
+    throw new Error("Cannot listen \"$event\" on " . $this::class, Error::LISTENING);
   }
 }

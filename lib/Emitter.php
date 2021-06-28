@@ -14,8 +14,8 @@ trait Emitter {
    * Takes other optional arguments
    */
    public function emit(string $event, ...$args) {
-     if(method_exists($this, $emit = 'emit' . ucFirst($event)))
-       return $this->$emit(...$args);
-     throw new Error('Cannot emit event ' . $this::class . "::$event", Error::EMITTING);
+     if(method_exists($this, $event))
+       return $this->$event(...$args);
+     throw new Error("Cannot emit \"$event\" on " . $this::class, Error::EMITTING);
    }
 }
