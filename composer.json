@@ -1,0 +1,40 @@
+{
+    "name": "sikessem/events",
+    "type": "library",
+    "description": "Manage events in PHP",
+    "license": "Apache-2.0",
+    "keywords": [
+        "events",
+        "event-listener",
+        "event-emitter",
+        "emit-event",
+        "listen-event",
+        "sikessem"
+    ],
+    "readme": "README.md",
+    "authors": [{
+        "homepage": "https://sikessem.omninf.com",
+        "name": "SIGUI kessé Emmanuel",
+        "email": "sikessem@omninf.com",
+        "role": "Developer"
+    }],
+    "support": {
+        "source": "https://github.com/SIKessEm/Events",
+        "issues": "https://github.com/SIKessEm/Events/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "SIKessEm\\Events\\": "lib/"
+        }
+    },
+    "require": {
+        "php": ">=8.0"
+    },
+    "config": {
+        "vendor-dir": "pkg",
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
