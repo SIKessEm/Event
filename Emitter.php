@@ -10,12 +10,12 @@ trait Emitter {
   /**
    * Emit an event
    *
-   * @param string $name The event name
+   * @param string $event The event name
    * Takes other optional arguments
    */
-   public function emit(string $name, ...$args) {
-     if(method_exists($this, $emit = 'emit' . ucFirst($name)))
+   public function emit(string $event, ...$args) {
+     if(method_exists($this, $emit = 'emit' . ucFirst($event)))
        return $this->$emit(...$args);
-     throw new Error('Cannot emit event ' . $this::class . "::$name", Error::EMITTING);
+     throw new Error('Cannot emit event ' . $this::class . "::$event", Error::EMITTING);
    }
 }
